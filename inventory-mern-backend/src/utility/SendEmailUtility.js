@@ -1,4 +1,4 @@
-var nodemailer=require('nodemailer');
+var nodemailer = require('nodemailer');
 
 const SendEmailUtility= async (EmailTo, EmailText, EmailSubject) => {
 
@@ -22,6 +22,6 @@ const SendEmailUtility= async (EmailTo, EmailText, EmailSubject) => {
     };
 
    return  await transporter.sendMail(mailOptions)
-}
 
-module.exports.SendEmailUtility;
+}
+module.exports=SendEmailUtility
