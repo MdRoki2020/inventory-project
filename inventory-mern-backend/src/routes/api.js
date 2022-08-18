@@ -6,6 +6,7 @@ const CategoriesController=require('../controllers/Categories/CategoriesControll
 const CustomersController=require('../controllers/Customers/CustomersController')
 const SuppliersController=require('../controllers/Suppliers/SuppliersController')
 const ExpenseTypesController=require('../controllers/Expenses/ExpenseTypesController')
+const ExpensesController=require('../controllers/Expenses/ExpensesController')
 const router=express.Router();
 
 //USER PROFILE...
@@ -50,5 +51,13 @@ router.post("/CreateExpenseTypes",AuthVerifyMiddleware,ExpenseTypesController.Cr
 router.post("/UpdateExpenseTypes/:id",AuthVerifyMiddleware,ExpenseTypesController.UpdateExpenseTypes);
 router.get("/ExpenseTypesList/:pageNo/:perPage/:searchKeyword",AuthVerifyMiddleware,ExpenseTypesController.ExpenseTypesList);
 router.get("/ExpenseTypesDropDown",AuthVerifyMiddleware,ExpenseTypesController.ExpenseTypesDropDown);
+
+
+// Expenses
+router.post("/CreateExpenses",AuthVerifyMiddleware,ExpensesController.CreateExpenses);
+router.post("/UpdateExpenses/:id",AuthVerifyMiddleware,ExpensesController.UpdateExpenses);
+router.get("/ExpensesList/:pageNo/:perPage/:searchKeyword",AuthVerifyMiddleware,ExpensesController.ExpensesList);
+
+
 
 module.exports=router;
