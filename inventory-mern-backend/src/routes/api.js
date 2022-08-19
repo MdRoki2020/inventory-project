@@ -8,6 +8,7 @@ const SuppliersController=require('../controllers/Suppliers/SuppliersController'
 const ExpenseTypesController=require('../controllers/Expenses/ExpenseTypesController')
 const ExpensesController=require('../controllers/Expenses/ExpensesController')
 const ProductsController=require('../controllers/Products/ProductsController')
+const PurchasesController=require('../controllers/Purchases/PurchasesController')
 const router=express.Router();
 
 //USER PROFILE...
@@ -65,5 +66,8 @@ router.post("/CreateProducts",AuthVerifyMiddleware,ProductsController.CreateProd
 router.post("/UpdateProducts/:id",AuthVerifyMiddleware,ProductsController.UpdateProducts);
 router.get("/ProductsList/:pageNo/:perPage/:searchKeyword",AuthVerifyMiddleware,ProductsController.ProductsList);
 
+
+//Purchases
+router.post("/CreatePurchases",AuthVerifyMiddleware,PurchasesController.CreatePurchases);
 
 module.exports=router;
