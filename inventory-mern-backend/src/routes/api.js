@@ -9,6 +9,8 @@ const ExpenseTypesController=require('../controllers/Expenses/ExpenseTypesContro
 const ExpensesController=require('../controllers/Expenses/ExpensesController')
 const ProductsController=require('../controllers/Products/ProductsController')
 const PurchasesController=require('../controllers/Purchases/PurchasesController')
+const SalesController=require('../controllers/Sales/SalesController')
+const ReturnsController=require('../controllers/Returns/ReturnsController')
 const router=express.Router();
 
 //USER PROFILE...
@@ -71,5 +73,16 @@ router.get("/ProductsList/:pageNo/:perPage/:searchKeyword",AuthVerifyMiddleware,
 router.post("/CreatePurchases",AuthVerifyMiddleware,PurchasesController.CreatePurchases);
 router.get("/PurchasesList/:pageNo/:perPage/:searchKeyword",AuthVerifyMiddleware,PurchasesController.PurchasesList);
 
+
+
+//Sales
+router.post("/CreateSales",AuthVerifyMiddleware,SalesController.CreateSales);
+router.get("/SalesList/:pageNo/:perPage/:searchKeyword",AuthVerifyMiddleware,SalesController.SalesList);
+// router.get("/SaleDelete/:id",AuthVerifyMiddleware,SalesController.SaleDelete);
+
+//Return
+router.post("/CreateReturns",AuthVerifyMiddleware,ReturnsController.CreateReturns);
+router.get("/ReturnsList/:pageNo/:perPage/:searchKeyword",AuthVerifyMiddleware,ReturnsController.ReturnsList);
+// router.get("/ReturnDelete/:id",AuthVerifyMiddleware,ReturnsController.ReturnDelete);
 
 module.exports=router;
