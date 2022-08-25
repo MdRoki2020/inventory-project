@@ -6,7 +6,7 @@ const CategoriesController=require('../controllers/Categories/CategoriesControll
 const CustomersController=require('../controllers/Customers/CustomersController')
 const SuppliersController=require('../controllers/Suppliers/SuppliersController')
 const ExpenseTypesController=require('../controllers/Expenses/ExpenseTypesController')
-const ExpensesController=require('../controllers/Expenses/ExpensesController')
+const ExpensesController = require("../controllers/Expenses/ExpensesController");
 const ProductsController=require('../controllers/Products/ProductsController')
 const PurchasesController=require('../controllers/Purchases/PurchasesController')
 const SalesController=require('../controllers/Sales/SalesController')
@@ -61,7 +61,7 @@ router.get("/ExpenseTypesDropDown",AuthVerifyMiddleware,ExpenseTypesController.E
 router.post("/CreateExpenses",AuthVerifyMiddleware,ExpensesController.CreateExpenses);
 router.post("/UpdateExpenses/:id",AuthVerifyMiddleware,ExpensesController.UpdateExpenses);
 router.get("/ExpensesList/:pageNo/:perPage/:searchKeyword",AuthVerifyMiddleware,ExpensesController.ExpensesList);
-
+router.get("/DeleteExpense/:id",AuthVerifyMiddleware,ExpensesController.DeleteExpense);
 
 // Products
 router.post("/CreateProducts",AuthVerifyMiddleware,ProductsController.CreateProducts);
