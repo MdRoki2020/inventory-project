@@ -4,6 +4,7 @@ const UpdateService = require("../../services/common/UpdateService");
 const ListTwoJoinService = require("../../services/common/ListTwoJoinService");
 const CheckAssociateService = require("../../services/common/CheckAssociateService");
 const DeleteService = require("../../services/common/DeleteService");
+const DetailsByIDService = require("../../services/common/DetailsByIDService");
 
 
 exports.CreateProducts=async (req, res) => {
@@ -46,6 +47,25 @@ exports.DeleteProduct=async (req, res) => {
     }
     else if(CheckSaleAssociate){
         res.status(200).json({status: "associate", data: "Associate with Sale"})
+    }
+    else{
+        let Result=await DeleteService(req,DataModel);
+        res.status(200).json(Result)
+    }
+}
+
+exports.ProductsDetailsByID=async (req, res) => {
+    let Result= await DetailsByIDService(req,DataModel)
+    res.status(200).json(Result)
+}
+
+
+exports.DeleteSupplier=async (req, res) => {
+    let DeleteID=req.params.id;
+    const ObjectId = mongoose.Types.ObjectId;
+    let CheckAssociate= await CheckAssociateService({SupplierID:ObjectId(DeleteID)},PurchasesModel);
+    if(CheckAssociate){
+        res.status(200).json({status: "associate", data: "Associate with Purchases"})
     }
     else{
         let Result=await DeleteService(req,DataModel);

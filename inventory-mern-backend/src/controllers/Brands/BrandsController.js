@@ -5,6 +5,7 @@ const ListService = require("../../services/common/ListService");
 const DropDownService = require("../../services/common/DropDownService");
 const CheckAssociateService = require("../../services/common/CheckAssociateService");
 const DeleteService = require("../../services/common/DeleteService");
+const DetailsByIDService = require("../../services/common/DetailsByIDService");
 
 exports.CreateBrand=async (req, res) => {
     let Result= await CreateService(req,DataModel)
@@ -20,6 +21,11 @@ exports.BrandList=async (req, res) => {
     let SearchRgx = {"$regex": req.params.searchKeyword, "$options": "i"}
     let SearchArray=[{Name: SearchRgx}]
     let Result= await ListService(req,DataModel,SearchArray)
+    res.status(200).json(Result)
+}
+
+exports.BrandDetailsByID=async (req, res) => {
+    let Result= await DetailsByIDService(req,DataModel)
     res.status(200).json(Result)
 }
 
