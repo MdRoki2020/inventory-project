@@ -1,10 +1,14 @@
-import React from 'react';
-import PageImg from "../../assets/images/404.png";
-const NotFound = () => {
+import React, {Fragment, lazy, Suspense} from 'react';
+import LazyLoader from "../../components/MasterLayout/LazyLoader";
+const NotFound =lazy(() => import('../../components/NotFound/NotFound'));
+const Page404 = () => {
     return (
-        <div className="center-screen">
-            <img className="animated fadeIn" src={PageImg}/>
-        </div>
+        <Fragment>
+            <Suspense fallback={<LazyLoader/>}>
+                <NotFound/>
+            </Suspense>
+        </Fragment>
     );
 };
-export default NotFound;
+
+export default Page404;
