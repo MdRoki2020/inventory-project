@@ -1,4 +1,5 @@
 import React,{Fragment} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {getToken} from "./helper/SessionHelper";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
