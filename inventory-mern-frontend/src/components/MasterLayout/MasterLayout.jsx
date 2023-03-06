@@ -47,7 +47,7 @@ const MasterLayout = (props) => {
   const sidebarItems = [
     {
       title: 'Dashboard',
-      icon: <RiDashboardLine className="side-bar-item-icon" />,
+      icon: <BsBagPlus className="side-bar-item-icon" />,
       url: '/',
       subMenu: [],
     },
@@ -72,18 +72,18 @@ const MasterLayout = (props) => {
     },
     {
       title: 'Supplier',
-      icon: <TbTruckDelivery className="side-bar-item-icon" />,
+      icon: <BsBagPlus className="side-bar-item-icon" />,
       url: '/Supplier',
       subMenu: [
         {
           title: 'New Supplier',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <BsBagPlus size={16} className="side-bar-subitem-icon" />,
           url: '/SupplierCreateUpdatePage',
         },
         {
           title: 'Supplier List',
           icon: (
-              <BsCircle size={16} className="side-bar-subitem-icon" />
+              <BsBagPlus size={16} className="side-bar-subitem-icon" />
           ),
           url: '/SupplierListPage',
         },
@@ -91,30 +91,30 @@ const MasterLayout = (props) => {
     },
     {
       title: 'Expense',
-      icon: <AiOutlineBank  className="side-bar-item-icon" />,
+      icon: <BsBagPlus  className="side-bar-item-icon" />,
       url: '/Expense',
       subMenu: [
         {
           title: 'New Expense Type',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <BsBagPlus size={16} className="side-bar-subitem-icon" />,
           url: '/ExpenseTypeCreateUpdatePage',
         },
         {
           title: 'Expense Type List',
           icon: (
-              <BsCircle size={16} className="side-bar-subitem-icon" />
+              <BsBagPlus size={16} className="side-bar-subitem-icon" />
           ),
           url: '/ExpenseTypeListPage',
         },
         {
           title: 'New Expense',
-          icon: <IoCreateOutline  size={16} className="side-bar-subitem-icon" />,
+          icon: <BsBagPlus  size={16} className="side-bar-subitem-icon" />,
           url: '/ExpenseCreateUpdatePage',
         },
         {
           title: 'Expense List',
           icon: (
-              <AiOutlineUnorderedList size={16} className="side-bar-subitem-icon" />
+              <BsBagPlus size={16} className="side-bar-subitem-icon" />
           ),
           url: '/ExpenseListPage',
         },
