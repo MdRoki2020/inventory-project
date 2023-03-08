@@ -34,7 +34,7 @@ import SalesCreateUpdatePage from "./pages/Sales/SalesCreateUpdatePage";
 import SalesListPage from "./pages/Sales/SalesListPage";
 import SupplierCreateUpdatePage from "./pages/Supplier/SupplierCreateUpdatePage";
 import SupplierListPage from "./pages/Supplier/SupplierListPage";
-import ExpenseTypeList from "./components/ExpenseType/ExpenseTypeList";
+// import ExpenseTypeList from "./components/ExpenseType/ExpenseTypeList";
 import ExpenseTypeListPage from "./pages/ExpenseType/ExpenseTypeListPage";
 const App = () => {
     if(getToken()){
