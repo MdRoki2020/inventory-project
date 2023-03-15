@@ -2,7 +2,7 @@ import React, {Fragment, useEffect, useState} from 'react';
 import {ReturnListRequest} from "../../APIRequest/ReturnAPIRequest";
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-import {AiOutlineEdit, AiOutlineEye} from "react-icons/all";
+import { AiOutlineEdit, AiOutlineEye } from "react-icons/ai";
 import ReactPaginate from "react-paginate";
 import CurrencyFormat from "react-currency-format";
 import moment from "moment/moment";

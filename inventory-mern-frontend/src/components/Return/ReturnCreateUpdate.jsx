@@ -5,7 +5,7 @@ import {
     ProductDropDownRequest
 } from "../../APIRequest/ReturnAPIRequest";
 import {useSelector} from "react-redux";
-import {BsCartCheck, BsTrash} from "react-icons/all";
+import { BsCartCheck, BsTrash } from "react-icons/bs";
 import {ErrorToast, IsEmpty} from "../../helper/FormHelper";
 import store from "../../redux/store/store";
 import {OnChangeReturnInput, RemoveReturnItem, SetReturnItemList} from "../../redux/state-slice/return-slice";

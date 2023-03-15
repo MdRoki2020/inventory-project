@@ -1,6 +1,6 @@
 import React, {Fragment, useEffect, useRef} from 'react';
 import {useSelector} from "react-redux";
-import {BsCartCheck, BsTrash} from "react-icons/all";
+import { BsCartCheck, BsTrash } from "react-icons/bs";
 import {ErrorToast, IsEmpty} from "../../helper/FormHelper";
 import store from "../../redux/store/store";
 import {OnChangePurchaseInput, RemovePurchaseItem, SetPurchaseItemList} from "../../redux/state-slice/purchase-slice";

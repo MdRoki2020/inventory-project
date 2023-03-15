@@ -2,7 +2,7 @@ import React, {Fragment, useEffect, useState} from 'react';
 import {DeleteProductRequest, ProductListRequest} from "../../APIRequest/ProductAPIRequest";
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-import {AiOutlineDelete, AiOutlineEdit} from "react-icons/all";
+import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import {DeleteAlert} from "../../helper/DeleteAlert";
 import ReactPaginate from "react-paginate";
 

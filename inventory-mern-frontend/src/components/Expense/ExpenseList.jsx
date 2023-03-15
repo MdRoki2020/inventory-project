@@ -2,7 +2,7 @@ import React, {Fragment, useEffect, useState} from 'react';
 import {DeleteExpenseRequest, ExpenseListRequest} from "../../APIRequest/ExpenseAPIRequest";
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-import {AiOutlineDelete, AiOutlineEdit} from "react-icons/all";
+import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import ReactPaginate from "react-paginate";
 import CurrencyFormat from "react-currency-format";
 import {DeleteAlert} from "../../helper/DeleteAlert";
