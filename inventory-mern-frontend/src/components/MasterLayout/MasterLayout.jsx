@@ -1,14 +1,14 @@
 import React, { Fragment, useRef } from 'react';
 import { Accordion, Container, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import {AiOutlineBank, AiOutlineLogout, AiOutlineMenu, AiOutlineUser,AiOutlineUnorderedList} from 'react-icons/ai';
-import {BsBagPlus, BsBagX, BsBox, BsCartPlus, BsCircle, BsGraphUp, BsPeople} from 'react-icons/bs';
-import { IoCreateOutline } from "react-icons/io5";
-import { RiDashboardLine } from "react-icons/ri";
-import { TbTruckDelivery } from "react-icons/tb";
+// import {AiOutlineBank, AiOutlineLogout, AiOutlineMenu, AiOutlineUser,AiOutlineUnorderedList} from 'react-icons/ai';
+// import {BsBagPlus, BsBagX, BsBox, BsCartPlus, BsCircle, BsGraphUp, BsPeople} from 'react-icons/bs';
+// import { IoCreateOutline } from "react-icons/io5";
+// import { RiDashboardLine } from "react-icons/ri";
+// import { TbTruckDelivery } from "react-icons/tb";
+import { AiFillCaretRight } from "react-icons/ai";
 import logo from "../../assets/images/Logo.svg"
 import {getUserDetails, removeSessions} from "../../helper/SessionHelper";
-
 const MasterLayout = (props) => {
   let contentRef, sideNavRef,topNavRef = useRef();
 
@@ -50,24 +50,24 @@ const MasterLayout = (props) => {
   const sidebarItems = [
     {
       title: 'Dashboard',
-      icon: <RiDashboardLine className="side-bar-item-icon" />,
+      icon: <AiFillCaretRight className="side-bar-item-icon" />,
       url: '/',
       subMenu: [],
     },
     {
       title: 'Customer',
-      icon: <BsPeople  className="side-bar-item-icon" />,
+      icon: <AiFillCaretRight  className="side-bar-item-icon" />,
       url: '/Customer',
       subMenu: [
         {
           title: 'New Customer',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight size={16} className="side-bar-subitem-icon" />,
           url: '/CustomerCreateUpdatePage',
         },
         {
           title: 'Customer List',
           icon: (
-              <BsCircle size={16} className="side-bar-subitem-icon" />
+              <AiFillCaretRight size={16} className="side-bar-subitem-icon" />
           ),
           url: '/CustomerListPage',
         },
@@ -75,18 +75,18 @@ const MasterLayout = (props) => {
     },
     {
       title: 'Supplier',
-      icon: <TbTruckDelivery className="side-bar-item-icon" />,
+      icon: <AiFillCaretRight className="side-bar-item-icon" />,
       url: '/Supplier',
       subMenu: [
         {
           title: 'New Supplier',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight size={16} className="side-bar-subitem-icon" />,
           url: '/SupplierCreateUpdatePage',
         },
         {
           title: 'Supplier List',
           icon: (
-              <BsCircle size={16} className="side-bar-subitem-icon" />
+              <AiFillCaretRight size={16} className="side-bar-subitem-icon" />
           ),
           url: '/SupplierListPage',
         },
@@ -94,30 +94,30 @@ const MasterLayout = (props) => {
     },
     {
       title: 'Expense',
-      icon: <AiOutlineBank  className="side-bar-item-icon" />,
+      icon: <AiFillCaretRight  className="side-bar-item-icon" />,
       url: '/Expense',
       subMenu: [
         {
           title: 'New Expense Type',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight size={16} className="side-bar-subitem-icon" />,
           url: '/ExpenseTypeCreateUpdatePage',
         },
         {
           title: 'Expense Type List',
           icon: (
-              <BsCircle size={16} className="side-bar-subitem-icon" />
+              <AiFillCaretRight size={16} className="side-bar-subitem-icon" />
           ),
           url: '/ExpenseTypeListPage',
         },
         {
           title: 'New Expense',
-          icon: <IoCreateOutline  size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight  size={16} className="side-bar-subitem-icon" />,
           url: '/ExpenseCreateUpdatePage',
         },
         {
           title: 'Expense List',
           icon: (
-              <AiOutlineUnorderedList size={16} className="side-bar-subitem-icon" />
+              <AiFillCaretRight size={16} className="side-bar-subitem-icon" />
           ),
           url: '/ExpenseListPage',
         },
@@ -125,42 +125,42 @@ const MasterLayout = (props) => {
     },
     {
       title: 'Product',
-      icon: <BsBox className="side-bar-item-icon" />,
+      icon: <AiFillCaretRight className="side-bar-item-icon" />,
       url: '/Product',
       subMenu: [
         {
           title: 'New Brand',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight size={16} className="side-bar-subitem-icon" />,
           url: '/BrandCreateUpdatePage',
         },
         {
           title: 'Brand List',
           icon: (
-              <BsCircle  size={16} className="side-bar-subitem-icon" />
+              <AiFillCaretRight  size={16} className="side-bar-subitem-icon" />
           ),
           url: '/BrandListPage',
         },
         {
           title: 'New Category',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight size={16} className="side-bar-subitem-icon" />,
           url: '/CategoryCreateUpdatePage',
         },
         {
           title: 'Category List',
           icon: (
-              <BsCircle size={16} className="side-bar-subitem-icon" />
+              <AiFillCaretRight size={16} className="side-bar-subitem-icon" />
           ),
           url: '/CategoryListPage',
         },
         {
           title: 'New Product',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight size={16} className="side-bar-subitem-icon" />,
           url: '/ProductCreateUpdatePage',
         },
         {
           title: 'Product List',
           icon: (
-              <BsCircle  size={16} className="side-bar-subitem-icon" />
+              <AiFillCaretRight  size={16} className="side-bar-subitem-icon" />
           ),
           url: '/ProductListPage',
         },
@@ -168,18 +168,18 @@ const MasterLayout = (props) => {
     },
     {
       title: 'Purchase',
-      icon: <BsBagPlus className="side-bar-item-icon" />,
+      icon: <AiFillCaretRight className="side-bar-item-icon" />,
       url: '/Purchase',
       subMenu: [
         {
           title: 'New Purchase',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight size={16} className="side-bar-subitem-icon" />,
           url: '/PurchaseCreateUpdatePage',
         },
         {
           title: 'Purchase List',
           icon: (
-              <BsCircle size={16} className="side-bar-subitem-icon" />
+              <AiFillCaretRight size={16} className="side-bar-subitem-icon" />
           ),
           url: '/PurchaseListPage',
         },
@@ -187,18 +187,18 @@ const MasterLayout = (props) => {
     },
     {
       title: 'Sale',
-      icon: <BsCartPlus className="side-bar-item-icon" />,
+      icon: <AiFillCaretRight className="side-bar-item-icon" />,
       url: '/Sale',
       subMenu: [
         {
           title: 'New Sale',
-          icon: <BsCircle  size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight  size={16} className="side-bar-subitem-icon" />,
           url: '/SalesCreateUpdatePage',
         },
         {
           title: 'Sale List',
           icon: (
-              <BsCircle size={16} className="side-bar-subitem-icon" />
+              <AiFillCaretRight size={16} className="side-bar-subitem-icon" />
           ),
           url: '/SalesListPage',
         },
@@ -206,44 +206,44 @@ const MasterLayout = (props) => {
     },
     {
       title: 'Return',
-      icon: <BsBagX className="side-bar-item-icon" />,
+      icon: <AiFillCaretRight className="side-bar-item-icon" />,
       url: '/Return',
       subMenu: [
         {
           title: 'New Return',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight size={16} className="side-bar-subitem-icon" />,
           url: '/ReturnCreateUpdatePage',
         },
         {
           title: 'Return List',
-          icon: (<BsCircle size={16} className="side-bar-subitem-icon" />),
+          icon: (<AiFillCaretRight size={16} className="side-bar-subitem-icon" />),
           url: '/ReturnListPage',
         },
       ],
     },
     {
       title: 'Report',
-      icon: <BsGraphUp className="side-bar-item-icon" />,
+      icon: <AiFillCaretRight className="side-bar-item-icon" />,
       url: '/Report',
       subMenu: [
         {
           title: 'Sale Report',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight size={16} className="side-bar-subitem-icon" />,
           url: '/SaleReportPage',
         },
         {
           title: 'Return Report',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight size={16} className="side-bar-subitem-icon" />,
           url: '/ReturnReportPage',
         },
         {
           title: 'Purchase Report',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight size={16} className="side-bar-subitem-icon" />,
           url: '/PurchaseReportPage',
         },
         {
           title: 'Expense Report',
-          icon: <BsCircle size={16} className="side-bar-subitem-icon" />,
+          icon: <AiFillCaretRight size={16} className="side-bar-subitem-icon" />,
           url: '/ExpenseReportPage',
         },
       ],
@@ -260,7 +260,7 @@ const MasterLayout = (props) => {
 
             <Navbar.Brand>
               <div ref={(div) => {topNavRef = div}} className="top-nav-open">
-                <h4 className="text-white m-0 p-0"><a onClick={MenuBarClickHandler}><AiOutlineMenu /></a></h4>
+                <h4 className="text-white m-0 p-0"><a onClick={MenuBarClickHandler}><AiFillCaretRight /></a></h4>
               </div>
             </Navbar.Brand>
 
@@ -274,11 +274,11 @@ const MasterLayout = (props) => {
                     <hr className="user-dropdown-divider  p-0"/>
                   </div>
                   <NavLink to="/Profile" className="side-bar-item">
-                    <AiOutlineUser className="side-bar-item-icon" />
+                    <AiFillCaretRight className="side-bar-item-icon" />
                     <span className="side-bar-item-caption">Profile</span>
                   </NavLink>
                   <a onClick={onLogout}  className="side-bar-item">
-                    <AiOutlineLogout className="side-bar-item-icon" />
+                    <AiFillCaretRight className="side-bar-item-icon" />
                     <span className="side-bar-item-caption">Logout</span>
                   </a>
                 </div>
