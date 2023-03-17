@@ -3,7 +3,7 @@ import {BrandListRequest, DeleteBrandRequest} from "../../APIRequest/BrandAPIReq
 import {useSelector} from "react-redux";
 import ReactPaginate from "react-paginate";
 import {Link} from "react-router-dom";
-import {AiOutlineDelete, AiOutlineEdit} from "react-icons/all";
+import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import moment from 'moment';
 import {DeleteAlert} from "../../helper/DeleteAlert";
 const BrandList = () => {
